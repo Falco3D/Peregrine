@@ -13,5 +13,3 @@ deploy:
   - _build/your_file_1.pdf
   - _build/your_file_2.pdf
   skip_cleanup: true
-  on:
-    tags: true
