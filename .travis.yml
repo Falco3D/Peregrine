@@ -3,7 +3,7 @@ before_install:
 - sudo apt-get install texlive-latex-extra
 script:
 - mkdir _build
-- pdflatex -output-directory _build .test.tex
+- pdflatex -output-directory _build test.tex
 deploy:
   provider: releases
   api_key: ff2b4d7731d8d9e55ee90569c5ae2d6dab894fca
