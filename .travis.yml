@@ -1,14 +1,10 @@
+sudo: required
+dist: trusty
+branches:
+  only:
+    - master
+    - travistex
 before_install:
-- sudo apt-get update 
-- sudo apt-get install texlive-latex-extra
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
 script:
-- mkdir _build
-- pdflatex -output-directory _build test.tex
-deploy:
-  provider: releases
-  api_key: ff2b4d7731d8d9e55ee90569c5ae2d6dab894fca
-  file:
-  - ./_build/Hello.pdf
-  skip_cleanup: true
-  on:
-    branch: all_branches
+- pdflatex -interaction=nonstopmode -halt-on-error *.tex
