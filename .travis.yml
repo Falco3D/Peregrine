@@ -1,18 +1,8 @@
 sudo: required
 dist: trusty
 before_install:
-- openssl aes-256-cbc -K $encrypted_28f600e60088_key -iv $encrypted_28f600e60088_iv -in github_deploy_key.enc -out github_deploy_key -d
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
 script:
-- mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build test.tex
-deploy:
-  provider: releases
-  api_key:
-    secure: [YOUR KEY]
-  file:
-  - _build/your_file_1.pdf
-  - _build/your_file_2.pdf
-  skip_cleanup: true
+- pdflatex -interaction=nonstopmode -halt-on-error *.tex
 on:
   all_branches: true
