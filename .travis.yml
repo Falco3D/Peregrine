@@ -11,5 +11,4 @@ deploy:
   file:
     - build/documentation.pdf
   on:
-    tags: true
-    branch: master
+    branch: travistex
