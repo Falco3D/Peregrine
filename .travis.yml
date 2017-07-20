@@ -1,10 +1,15 @@
-sudo: required
-dist: trusty
-branches:
-  only:
-    - master
-    - travistex
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
+- sudo apt-get update -qq
+- sudo apt-get install texlive-latex-base
 script:
-- pdflatex -interaction=nonstopmode -halt-on-error *.tex
+- mkdir build
+- pdflatex -output-directory build test.tex
+deploy:
+  provider: releases
+  api_key:
+    secure:
+  file:
+    - build/root.pdf
+  skip_cleanup: true
+  on:
+    all_branches: true
