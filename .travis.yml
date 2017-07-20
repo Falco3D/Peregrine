@@ -3,12 +3,13 @@ before_install:
 - sudo apt-get install texlive-latex-base
 script:
 - mkdir build
-- pdflatex -output-directory build test.tex
+- pdflatex -output-directory build test2.tex
 deploy:
   provider: releases
   api_key:
     secure: DKBrbpPZUf2f+ExaMQRyEsu+rj4XK0RdNrsgHdYqykagZ+ixw9l6RlVA0ief3dxs7UGRrgTQHQYqvO55NT3u2sktSr6e0pbwCua0SAnnEsfbGsjjfwyokkr5LXN2fOatVBeEGTCBDGaPD1Pqtb1GquqK0VfnzNTJthDEkdpU0vXkmEkdkUn9Cg697N3ttnkEtnRfpD0lep5hUk5wXzITMz+Hgo5vPUPQvFjLTdSEZoA0qIfxDndqCjQti3WnmQEmfbEYmoMIfsoD3eczOMMOTfijMMZI+b/miN2N2rbfnMSuDUbXX/TrWfci9GtUDQ4FBcJZEXJcOEBAhlPS5zQAIpJ1+s4qNFqARXz3LUtTlP5g6kOwfT5nI6bnhMkY7PlIulsqY0DM3wBgmI1oPdfoFkU0SmPCJRXCPtDiSzt9l4p8RQH9o7gU9YuWqWAr9WcymYOslMNT+EFTOkCF/b/CYZ2RFsCQt9w4qDtZAQ0hstYInunmJeA0atyWPOvQ+Iy8j9ZwArQ+5IEn84edEwroP/GYaANW5/hO+xaao6HOThgD1qfdXN3QHcj8LbtxXCrk9uL3tBfEjyZUCwVIKuruOPOjPmrmJvN6jd34jrUs9QP5XccmkJYyph2mOJGy0UHPYJNze+3R98PG2ZTV7YP8ER/YzTSMCbxmrKIpDknq9Io=
-  file: ".travis.yml"
+  file:
+    - build/test2.pdf
+  skip_cleanup: true
   on:
-    repo: Falco3D/Peregrine
-    branch: travistex
+    all_branches: true
