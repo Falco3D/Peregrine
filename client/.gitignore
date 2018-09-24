@@ -1,0 +1,13 @@
+cmake-build-debug/
+.idea/*
+*.elf
+*.hex
+*.bin
+*.dfu
+*.map
+*.a
+Makefile
+STMCube/.cproject
+STMCube/.osx.project
+STMCube/.project
+
