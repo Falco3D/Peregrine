@@ -69,6 +69,7 @@ add_library(STMCube_STM32F429ZI
         "Src/can.c"
         "Src/spi.c"
         "Src/crc.c"
+        "Src/system.c"
         "startup/startup_stm32f429xx.s"
 )
 

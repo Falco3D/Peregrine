@@ -13,7 +13,7 @@ add_subdirectory(STMCube)
 
 
 add_executable(Peregrine_Client_STM32F429ZI.elf
-        "src/main.c"
+        "src/main.cpp"
 )
 
 #target_include_directories(Peregrine_Client_STM32F429ZI.elf PUBLIC

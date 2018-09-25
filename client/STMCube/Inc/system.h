@@ -46,11 +46,14 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef __SYSTEM_H
+#define __SYSTEM_H
   /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* USER CODE END Includes */
 
@@ -134,16 +137,13 @@
 /* USER CODE END Private defines */
 
 void _Error_Handler(char *, int);
+void SystemClock_Config(void);
 
 #define Error_Handler() _Error_Handler(__FILE__, __LINE__)
 
-/**
-  * @}
-  */ 
+#ifdef __cplusplus
+}
+#endif
 
-/**
-  * @}
-*/ 
-
-#endif /* __MAIN_H */
+#endif /* __SYSTEM_H */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

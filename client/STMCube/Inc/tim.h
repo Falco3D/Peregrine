@@ -55,7 +55,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-#include "main.h"
+#include "system.h"
 
 /* USER CODE BEGIN Includes */
 
