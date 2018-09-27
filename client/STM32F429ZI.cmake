@@ -9,6 +9,7 @@ SET(CMAKE_SYSTEM_VERSION 1)
 # Give CMake the tools
 SET(CMAKE_C_COMPILER "/usr/local/bin/arm-none-eabi-gcc")
 SET(CMAKE_C++_COMPILER "/usr/local/bin/arm-none-eabi-g++")
+SET(CMAKE_ASM_COMPILER "/usr/local/bin/arm-none-eabi-gcc")
 SET(CMAKE_UTIL_SIZE "/usr/local/bin/arm-none-eabi-size")
 SET(CMAKE_UTIL_STRIP "/usr/local/bin/arm-none-eabi-strip")
 

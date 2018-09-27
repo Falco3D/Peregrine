@@ -2,7 +2,6 @@ project(STMCube C)
 
 cmake_minimum_required(VERSION 3.0)
 
-SET(CMAKE_VERBOSE_MAKEFILE ON)
 
 # Create library with sources - Manually update with new STMCube generation
 add_library(STMCube_STM32F429ZI

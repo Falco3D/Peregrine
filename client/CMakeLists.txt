@@ -12,9 +12,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build)
 # Add the STMCube directory for the library
 add_subdirectory(STMCube)
 
-# Verbosity for now, helps with testing
-SET(CMAKE_VERBOSE_MAKEFILE ON)
-
 # Tell CMake about asm files
 set(CMAKE_ASM_SOURCE_FILE_EXTENSIONS ".s")
 set(CMAKE_ASM_OUTPUT_EXTENSION ".o")
