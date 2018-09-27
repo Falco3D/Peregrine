@@ -1,8 +1,7 @@
 /**
   ******************************************************************************
-  * File Name          : IWDG.h
-  * Description        : This file provides code for the configuration
-  *                      of the IWDG instances.
+  * File Name          : main.h
+  * Description        : This file contains the common defines of the application
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -47,45 +46,104 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __iwdg_H
-#define __iwdg_H
-#ifdef __cplusplus
- extern "C" {
-#endif
-
-/* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx_hal.h"
-#include "system.h"
+#ifndef __MAIN_H
+#define __MAIN_H
+  /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
-extern IWDG_HandleTypeDef hiwdg;
+/* Private define ------------------------------------------------------------*/
+
+#define USER_Btn_Pin GPIO_PIN_13
+#define USER_Btn_GPIO_Port GPIOC
+#define MCO_Pin GPIO_PIN_0
+#define MCO_GPIO_Port GPIOH
+#define RMII_MDC_Pin GPIO_PIN_1
+#define RMII_MDC_GPIO_Port GPIOC
+#define RMII_REF_CLK_Pin GPIO_PIN_1
+#define RMII_REF_CLK_GPIO_Port GPIOA
+#define RMII_MDIO_Pin GPIO_PIN_2
+#define RMII_MDIO_GPIO_Port GPIOA
+#define axis5_Pin GPIO_PIN_3
+#define axis5_GPIO_Port GPIOA
+#define RMII_CRS_DV_Pin GPIO_PIN_7
+#define RMII_CRS_DV_GPIO_Port GPIOA
+#define RMII_RXD0_Pin GPIO_PIN_4
+#define RMII_RXD0_GPIO_Port GPIOC
+#define RMII_RXD1_Pin GPIO_PIN_5
+#define RMII_RXD1_GPIO_Port GPIOC
+#define axis7_Pin GPIO_PIN_0
+#define axis7_GPIO_Port GPIOB
+#define axis8_Pin GPIO_PIN_1
+#define axis8_GPIO_Port GPIOB
+#define axis0_Pin GPIO_PIN_11
+#define axis0_GPIO_Port GPIOE
+#define axis1_Pin GPIO_PIN_13
+#define axis1_GPIO_Port GPIOE
+#define axis2_Pin GPIO_PIN_14
+#define axis2_GPIO_Port GPIOE
+#define axis4_Pin GPIO_PIN_10
+#define axis4_GPIO_Port GPIOB
+#define RMII_TXD1_Pin GPIO_PIN_13
+#define RMII_TXD1_GPIO_Port GPIOB
+#define LD3_Pin GPIO_PIN_14
+#define LD3_GPIO_Port GPIOB
+#define STLK_RX_Pin GPIO_PIN_8
+#define STLK_RX_GPIO_Port GPIOD
+#define STLK_TX_Pin GPIO_PIN_9
+#define STLK_TX_GPIO_Port GPIOD
+#define axis9_Pin GPIO_PIN_13
+#define axis9_GPIO_Port GPIOD
+#define axis10_Pin GPIO_PIN_14
+#define axis10_GPIO_Port GPIOD
+#define axis11_Pin GPIO_PIN_15
+#define axis11_GPIO_Port GPIOD
+#define USB_PowerSwitchOn_Pin GPIO_PIN_6
+#define USB_PowerSwitchOn_GPIO_Port GPIOG
+#define USB_OverCurrent_Pin GPIO_PIN_7
+#define USB_OverCurrent_GPIO_Port GPIOG
+#define axis6_Pin GPIO_PIN_7
+#define axis6_GPIO_Port GPIOC
+#define USB_SOF_Pin GPIO_PIN_8
+#define USB_SOF_GPIO_Port GPIOA
+#define USB_VBUS_Pin GPIO_PIN_9
+#define USB_VBUS_GPIO_Port GPIOA
+#define USB_ID_Pin GPIO_PIN_10
+#define USB_ID_GPIO_Port GPIOA
+#define USB_DM_Pin GPIO_PIN_11
+#define USB_DM_GPIO_Port GPIOA
+#define USB_DP_Pin GPIO_PIN_12
+#define USB_DP_GPIO_Port GPIOA
+#define TMS_Pin GPIO_PIN_13
+#define TMS_GPIO_Port GPIOA
+#define TCK_Pin GPIO_PIN_14
+#define TCK_GPIO_Port GPIOA
+#define RMII_TX_EN_Pin GPIO_PIN_11
+#define RMII_TX_EN_GPIO_Port GPIOG
+#define RMII_TXD0_Pin GPIO_PIN_13
+#define RMII_TXD0_GPIO_Port GPIOG
+#define axis3_Pin GPIO_PIN_3
+#define axis3_GPIO_Port GPIOB
+#define LD2_Pin GPIO_PIN_7
+#define LD2_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
-extern void _Error_Handler(char *, int);
+void _Error_Handler(char *, int);
 
-void MX_IWDG_Init(void);
-
-/* USER CODE BEGIN Prototypes */
-
-/* USER CODE END Prototypes */
-
-#ifdef __cplusplus
-}
-#endif
-#endif /*__ iwdg_H */
+#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
 
 /**
   * @}
-  */
+  */ 
 
 /**
   * @}
-  */
+*/ 
 
+#endif /* __MAIN_H */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

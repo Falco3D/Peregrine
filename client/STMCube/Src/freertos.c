@@ -70,6 +70,8 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* USER CODE BEGIN FunctionPrototypes */
 
+extern void start_main_task(void);
+
 /* USER CODE END FunctionPrototypes */
 
 /* Hook prototypes */
@@ -114,11 +116,12 @@ void StartDefaultTask(void const * argument)
   MX_USB_DEVICE_Init();
 
   /* USER CODE BEGIN StartDefaultTask */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
+  start_main_task();
+  osThreadTerminate(defaultTaskHandle);
+  while(1){
+    osThreadYield();
   }
+
   /* USER CODE END StartDefaultTask */
 }
 
